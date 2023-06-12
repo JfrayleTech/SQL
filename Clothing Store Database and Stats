@@ -1,0 +1,35 @@
+--Create a clothing store Database 
+CREATE TABLE jenni_store (ID INTEGER Primary Key, name TEXT, color TEXT, size TEXT, price INTEGER);
+
+INSERT INTO jenni_store VALUES(1, "Jacket", "Black", "L", 50);
+INSERT INTO jenni_store VALUES(2, "Cardigan", "Beige", "S", 45);
+INSERT INTO jenni_store VALUES (3, "T-shirt", "Red", "M", 25);
+INSERT INTO jenni_store VALUES (4, "T-shirt", "White", "M", 25);
+INSERT INTO jenni_store VALUES (5, "Sweater", "White", "M", 55);
+INSERT INTO jenni_store VALUES (6, "Jeans", "Denim", "S", 60);
+INSERT INTO jenni_store VALUES (7, "Jeans", "Distressed Denim", "S", 70);
+INSERT INTO jenni_store VALUES (8, "Blouse", "Floral", "XXS", 25);
+INSERT INTO jenni_store VALUES (9, "Blouse", "Blue", "XXS", 20);
+INSERT INTO jenni_store VALUES(10, "Blouse", "Grey", "XXS", 20);
+INSERT INTO jenni_store VALUES (11, "Tank Top", "Black", "L", 15);
+INSERT INTO jenni_store VALUES (12, "Tank Top", "Grey", "L", 15);
+INSERT INTO jenni_store VALUES (13, "Legging", "Black", "L", 30);
+INSERT INTO jenni_store VALUES (14, "Legging", "Galaxy", "L", 30);
+INSERT INTO jenni_store VALUES (15, "Legging", "Periwinkle", "L", 30);
+
+--display the database ordered by price. 
+SELECT * FROM jenni_store 
+ORDER BY price;
+
+--show items that are less than <30
+SELECT * FROM jenni_store 
+WHERE price <30 
+ORDER BY PRICE;
+
+--what is the average price of items?
+SELECT AVG(price) from jenni_store;
+
+--what is the most popular size?
+SELECT size popularity from jenni_store 
+order by popularity desc 
+limit 5;
